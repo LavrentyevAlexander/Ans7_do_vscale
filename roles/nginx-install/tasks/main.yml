@@ -1,0 +1,13 @@
+---    
+
+- name: Installing nginx for Centos
+  include_tasks: "nginx-centos.yml"
+  when: ansible_distribution == 'CentOS'
+
+- name: Installing nginx for Ubuntu
+  include_tasks: "nginx-ubuntu.yml"
+  when: ansible_distribution == 'Ubuntu'
+
+- name: Removing default virtual host config
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  notify: restarting nginx

@@ -1,0 +1,24 @@
+---
+
+- name: Installing nginx
+  yum: update_cache=yes name=nginx state=present
+
+- name: Create virt_host dir
+  file:
+    path: /var/www/html/{{ inventory_hostname }}/html/
+    state: directory
+    owner: root
+    group: root
+    recurse: true
+
+- name: Creating virtual host http {{vhost_name}} for CentOS nginx
+  template:
+    src: virt_host.http.conf.j2
+    dest: /var/www/html/{{ inventory_hostname }}/html/{{vhost_name}}.{{inventory_hostname}}.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restarting nginx
+
+- name: Allow http port in Centos firewall
+  command: firewall-cmd --permanent --add-port=80/tcp && firewall-cmd --reload 

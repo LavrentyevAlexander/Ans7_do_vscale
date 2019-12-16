@@ -1,0 +1,6 @@
+las-ubuntu.devops.rebrain.srwx.net 79.143.29.132 0oporI@jli3O1usS
+las1-ubuntu.devops.rebrain.srwx.net 79.143.29.100 0oporI@jli3O1usS
+ubuntu-las.devops.rebrain.srwx.net 82.148.16.198 0oporI@jli3O1usS
+ubuntu-las.devops.rebrain.srwx.net 79.143.31.146 97SVJE0HMb72S6jN
+ubuntu-las.devops.rebrain.srwx.net 79.143.30.239 oCDEsFXuYnhDcGbs
+las-centos 142.93.194.224 12345678

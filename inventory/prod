@@ -1,0 +1,3 @@
+[dev]
+ubuntu-las.devops.rebrain.srwx.net ansible_ssh_user=root
+las-centos.devops.rebrain.srwx.net ansible_ssh_user=root

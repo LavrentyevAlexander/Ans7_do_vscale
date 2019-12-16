@@ -1,0 +1,7 @@
+---
+- hosts: dev
+  roles:
+    - name: nginx-install
+      vars:
+       vhost_name: "web"
+

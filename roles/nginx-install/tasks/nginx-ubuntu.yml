@@ -1,0 +1,13 @@
+---
+- name: Installing nginx
+  apt: allow_unauthenticated=yes update_cache=yes name=nginx state=present
+
+- name: Creating virtual host http {{vhost_name}} for nginx
+  template:
+      src: virt_host.http.conf.j2
+      dest: /etc/nginx/sites-enabled/{{vhost_name}}.{{inventory_hostname}}.conf
+      owner: root
+      group: root
+      mode: 0644
+  notify: restarting nginx
+
