@@ -117,7 +117,7 @@ data "template_file" "ansible_inventory" {
 
 resource "digitalocean_droplet" "ops2" {
   count = "${length(var.dr_name)}"
-  image  = "centos-6-x64"
+  image  = "centos-7-x64"
   name   = "${element(var.dr_name, count.index)}"
   region = "nyc1"
   size   = "s-1vcpu-1gb"

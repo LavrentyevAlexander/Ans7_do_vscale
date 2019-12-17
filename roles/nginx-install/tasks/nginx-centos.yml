@@ -1,7 +1,32 @@
 ---
+- name: Creating repo file for nginx-Centos
+  template:
+    src: nginx.repo.j2
+    dest: /etc/yum.repos.d/nginx.repo
+    owner: root
+    group: root
+    mode: 0644
 
 - name: Installing nginx
   yum: update_cache=yes name=nginx state=present
+
+- name: Installing firewalld
+  yum: update_cache=yes name=firewalld state=present
+
+- name: Unmask firewalld
+  command: systemctl unmask firewalld
+
+- name: Enable firewalld
+  command: systemctl enable firewalld
+
+- name: Start firewalld
+  command: systemctl start firewalld
+
+- name: Allow http port in Centos firewall
+  command: firewall-cmd --permanent --add-port=80/tcp
+
+- name: Restart firewall
+  command: firewall-cmd --reload
 
 - name: Create virt_host dir
   file:
@@ -19,6 +44,3 @@
     group: root
     mode: 0644
   notify: restarting nginx
-
-- name: Allow http port in Centos firewall
-  command: firewall-cmd --permanent --add-port=80/tcp && firewall-cmd --reload 

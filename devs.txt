@@ -4,3 +4,11 @@ ubuntu-las.devops.rebrain.srwx.net 82.148.16.198 0oporI@jli3O1usS
 ubuntu-las.devops.rebrain.srwx.net 79.143.31.146 97SVJE0HMb72S6jN
 ubuntu-las.devops.rebrain.srwx.net 79.143.30.239 oCDEsFXuYnhDcGbs
 las-centos 142.93.194.224 12345678
+ubuntu-las.devops.rebrain.srwx.net 82.148.17.178 yr5xclMRGp64sfmX
+las-centos 104.248.239.95 12345678
+ubuntu-las.devops.rebrain.srwx.net 79.143.30.198 Evw3ggzk9Ukaxqz_
+ubuntu-las.devops.rebrain.srwx.net 37.228.116.3 zVcbMZicL20dLk5U
+las-centos 178.128.150.152 12345678
+ubuntu-las.devops.rebrain.srwx.net 37.228.116.195 bRsvHvKjkBZ93%bW
+las-centos 68.183.127.121 12345678
+ubuntu-las.devops.rebrain.srwx.net 82.148.17.156 BHwsj6iUB7HsF4wV
